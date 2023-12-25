@@ -68,11 +68,6 @@ $ ssh -vT git@github.com
 [How Setup Public Key](https://sbme-tutorials.github.io/2019/data-structures/notes/public_key.html)
 
 [Reference guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
-## Acknowledgements
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 
 
 ## Authors
