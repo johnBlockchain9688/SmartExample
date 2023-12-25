@@ -22,7 +22,6 @@ Create repository
 ```bash
 NODE_MAJOR=20
 echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-
 ```
 
 Install 
@@ -35,8 +34,40 @@ sudo apt-get install nodejs -y
 
 
 ## Setup github
+You can clone gitub project but to push your changes you can't use username and password.
+So the in my opinion the best thing to do is to use SSH key  
+First of all set your remote to git not http like follow
 
-ssh-keygen -t rsa -C "marcobaraldi@libero.it"
+```bash
+$ git remote set-url --add  git@github.com:johnBlockchain9688/SmartExample.git
+
+```
+
+After that generare your key couple
+
+```bash
+$ ssh-keygen
+```
+
+Then copy your public key in Github account
+
+```bash
+$ more ~/.ssh/id_rsa.pub
+```
+
+
+Test if everything is ok 
+
+```bash
+$ ssh -vT git@github.com
+```
+
+
+
+### Reference
+[How Setup Public Key](https://sbme-tutorials.github.io/2019/data-structures/notes/public_key.html)
+
+[Reference guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
 ## Acknowledgements
 
  - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
@@ -44,53 +75,7 @@ ssh-keygen -t rsa -C "marcobaraldi@libero.it"
  - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 
 
-## API Reference
-
-#### Get all items
-
-```http
-  GET /api/items
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-#### Get item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
-
-#### add(num1, num2)
-
-Takes two numbers and returns the sum.
-
-## Color Reference
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Example Color | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
-| Example Color | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
-| Example Color | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) #00b48a |
-| Example Color | ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0 |
-
-
 ## Authors
 
-- [@octokatherine](https://www.github.com/octokatherine)
+- [@ojohnBlockchain9688](https://www.github.com/johnBlockchain9688)
 
-
-## Usage/Examples
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-```
