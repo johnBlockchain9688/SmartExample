@@ -1,5 +1,7 @@
 
 
+#Download modified file from  repository
+git pull 
 
 #Add new file
 git add -A
