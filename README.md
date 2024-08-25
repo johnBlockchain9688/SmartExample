@@ -1,7 +1,7 @@
 
 # Project Title
 
-A brief description of this project 
+A brief description of this project.
 
 
 ## Install Nodejs
